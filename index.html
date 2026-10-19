@@ -39,10 +39,10 @@
 </ul>
 
 <h3>Destinations, searches and Routes</h3>
-<p>To find a Route, the app sends your starting point and destination to our server. Searches you type and points you long-press on the map are sent to our server to find places and name them. The server uses these to answer and does not store the coordinates or the text you searched for. While a Trip is live, the server holds its destination in memory so it can reroute you, and forgets it when the Trip ends. Saved Places (such as Home and Work) are stored only on your phone.</p>
+<p>To find a Route, the app sends your starting point and destination to our server. Searches you type and points you long-press on the map are sent to our server to find places and name them. The server uses these to answer and does not store the coordinates or the text you searched for. While a Trip is live, the server holds its destination in memory so it can reroute you, and forgets it when the Trip ends. Saved Places (such as Home and Work) are stored on your phone, and in your Android backup if you have backup turned on; they are never sent to our server.</p>
 
 <h3>Invite code and device token</h3>
-<p>The first time you open the app you enter a personal invite code. The app sends it to our server with a Google Play Integrity check, which confirms the app is the genuine one installed from Play. In exchange the server gives your phone a random device token, which the app sends with every request. The token identifies the phone, not you. While a Trip is live, the server links the Trip to the token in memory only, so that each phone has fair-use limits. That link is never written down, and it is gone when the Trip ends. The developer knows which invite code was given to whom, and can revoke a token, for example if a phone is lost.</p>
+<p>The first time you open the app you enter a personal invite code. The app sends it to our server with a Google Play Integrity check, which confirms the app is the genuine one installed from Play. In exchange the server gives your phone a random device token, which the app sends with every request. The token identifies the phone, not you. While a Trip is live, the server links the Trip to the token in memory only, so that each phone has fair-use limits. That link is not stored with your Probes or anywhere else, apart from the server logs below, and it is gone from memory when the Trip ends. The developer knows which invite code was given to whom, and can revoke a token, for example if a phone is lost.</p>
 
 <h3>Crash reports</h3>
 <p>The app uses Firebase Crashlytics, a Google service, to report crashes. A crash report holds the error and where in the app it happened, the app version, the phone model and Android version, and a random installation ID made by Crashlytics. Crash reports do not include your location or the device token. Google keeps crash reports for 90 days.</p>
@@ -54,7 +54,7 @@
 <p>The app can save a record of a drive on your phone (a Drive Log). This is off unless you turn it on. A Drive Log stays on the phone unless you choose to share it.</p>
 
 <h3>Server logs</h3>
-<p>Like any web server, ours records each request: the time, what was asked for, how long it took, the Trip ID if any, and the network (IP) address it came from. These logs are used to keep the service running and to fix problems, and are deleted after 30 days.</p>
+<p>Like any web server, ours records each request: the time, what was asked for, the Trip ID if any, a short form of the device token (never the token itself), and the network (IP) address it came from. These logs do not hold coordinates or what you searched for. These logs are used to keep the service running and to fix problems, and are deleted after 30 days.</p>
 
 <h2>Who else handles data</h2>
 <ul>
@@ -62,12 +62,12 @@
   <li><strong>MapTiler</strong> serves the map images. Your phone downloads them directly from MapTiler, which sees your IP address and which parts of the map you look at, but not your GPS location. See <a href="https://www.maptiler.com/privacy-policy/">MapTiler's privacy policy</a>.</li>
   <li><strong>Google</strong> runs Firebase Crashlytics and Play Integrity. See <a href="https://policies.google.com/privacy">Google's privacy policy</a> and <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>.</li>
 </ul>
-<p>Backups of the anonymous speeds and of problem reports are copied each night to the developer's own computer. Data is not sold or shared with anyone else, and is not used for advertising.</p>
+<p>Backups of the anonymous speeds, problem reports, invite codes and device tokens are copied each night to the developer's own computer. Data is not sold or shared with anyone else, and is not used for advertising.</p>
 
 <h2>Your choices</h2>
 <ul>
   <li>Location is sent only while navigating. To send nothing, don't start a Route, or remove the app's location permission in Android's settings.</li>
-  <li>Uninstalling the app deletes everything it kept on your phone.</li>
+  <li>Uninstalling the app deletes everything it kept on your phone, apart from your Android backup if you have one.</li>
   <li>You can ask for your device token to be revoked and for your problem reports to be deleted by emailing the address below. Anonymous speeds can't be deleted for one person, because nothing in them says whose they are.</li>
 </ul>
 
