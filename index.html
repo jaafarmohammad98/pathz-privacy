@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pathz privacy policy</title>
+<link rel="stylesheet" href="style.css">
+<link rel="alternate" hreflang="ar" href="ar.html">
+</head>
+<body>
+<main>
+<p class="lang"><a href="ar.html" hreflang="ar" lang="ar">العربية</a></p>
+
+<h1>Pathz privacy policy</h1>
+<p class="meta">Effective 19 October 2026</p>
+
+<p>Pathz is a navigation app for driving in Baghdad. It is made by one developer, Jaafar Mohammad, and is in a small invite-only test. This policy explains what the app collects, why, how long it is kept, and who else handles it.</p>
+
+<h2>In short</h2>
+<ul>
+  <li>There are no accounts. The app never asks for your name, phone number or email.</li>
+  <li>Your location leaves the phone only while you are navigating a Route.</li>
+  <li>After a drive, its first and last 300 metres are thrown away, and the rest is kept only as anonymous speeds on roads, with nothing that links it to your drive or your phone.</li>
+  <li>Nothing is sold, and there are no ads.</li>
+</ul>
+
+<h2>What the app collects</h2>
+
+<h3>Location while you navigate</h3>
+<p>The app asks for location only while you are using it, never in the background. While a Route is being navigated, guidance keeps running with the screen off, shown by a notification. During that time, and only then, the app sends Probes to our server: one GPS reading about every second, made of position, time, accuracy, speed and direction. They are sent in batches every 15 seconds, together with a random ID for that drive (the Trip). If the network is down, the phone holds them and sends them later, and discards any older than one hour. Probes can't be turned off while navigating, because they are how the app learns real road speeds.</p>
+<p>When you are not navigating, the app may still show your position on the map, but that position is not sent anywhere.</p>
+
+<h3>What happens to Probes on the server</h3>
+<p>Once a Trip ends (or after an hour with no new Probes), the server matches its Probes to the roads driven. Then:</p>
+<ul>
+  <li>The first and last 300 metres of the Trip are dropped, so the data doesn't show where you started or stopped.</li>
+  <li>The rest is stored per road segment as time and speed only. It has no Trip ID and no device identifier, so it can't be put back together into a drive or tied to a phone. Each road segment keeps a count of how many different Trips crossed it. These anonymous speeds are kept indefinitely, to estimate traffic.</li>
+  <li>The raw Probes, which do carry the Trip ID, are deleted 7 days after matching. If you send a problem report during or about a Trip, that Trip's raw Probes are kept for 7 days from the report, so the problem can be looked into.</li>
+</ul>
+
+<h3>Destinations, searches and Routes</h3>
+<p>To find a Route, the app sends your starting point and destination to our server. Searches you type and points you long-press on the map are sent to our server to find places and name them. The server uses these to answer and does not store the coordinates or the text you searched for. While a Trip is live, the server holds its destination in memory so it can reroute you, and forgets it when the Trip ends. Saved Places (such as Home and Work) are stored only on your phone.</p>
+
+<h3>Invite code and device token</h3>
+<p>The first time you open the app you enter a personal invite code. The app sends it to our server with a Google Play Integrity check, which confirms the app is the genuine one installed from Play. In exchange the server gives your phone a random device token, which the app sends with every request. The token identifies the phone, not you. While a Trip is live, the server links the Trip to the token in memory only, so that each phone has fair-use limits. That link is never written down, and it is gone when the Trip ends. The developer knows which invite code was given to whom, and can revoke a token, for example if a phone is lost.</p>
+
+<h3>Crash reports</h3>
+<p>The app uses Firebase Crashlytics, a Google service, to report crashes. A crash report holds the error and where in the app it happened, the app version, the phone model and Android version, and a random installation ID made by Crashlytics. Crash reports do not include your location or the device token. Google keeps crash reports for 90 days.</p>
+
+<h3>Problem reports</h3>
+<p>If you tap "Report a problem", the app sends what you write, the app version and, if you are on or have just finished a Trip, that Trip's ID. The developer uses this to find the Trip in the server logs and its raw Probes. Reports are kept until the problem is dealt with, and for at most one year.</p>
+
+<h3>Drive Logs</h3>
+<p>The app can save a record of a drive on your phone (a Drive Log). This is off unless you turn it on. A Drive Log stays on the phone unless you choose to share it.</p>
+
+<h3>Server logs</h3>
+<p>Like any web server, ours records each request: the time, what was asked for, how long it took, the Trip ID if any, and the network (IP) address it came from. These logs are used to keep the service running and to fix problems, and are deleted after 30 days.</p>
+
+<h2>Who else handles data</h2>
+<ul>
+  <li><strong>Oracle Cloud</strong> hosts our server, in its Middle East region. All traffic between the app and our server is encrypted (HTTPS).</li>
+  <li><strong>MapTiler</strong> serves the map images. Your phone downloads them directly from MapTiler, which sees your IP address and which parts of the map you look at, but not your GPS location. See <a href="https://www.maptiler.com/privacy-policy/">MapTiler's privacy policy</a>.</li>
+  <li><strong>Google</strong> runs Firebase Crashlytics and Play Integrity. See <a href="https://policies.google.com/privacy">Google's privacy policy</a> and <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>.</li>
+</ul>
+<p>Backups of the anonymous speeds and of problem reports are copied each night to the developer's own computer. Data is not sold or shared with anyone else, and is not used for advertising.</p>
+
+<h2>Your choices</h2>
+<ul>
+  <li>Location is sent only while navigating. To send nothing, don't start a Route, or remove the app's location permission in Android's settings.</li>
+  <li>Uninstalling the app deletes everything it kept on your phone.</li>
+  <li>You can ask for your device token to be revoked and for your problem reports to be deleted by emailing the address below. Anonymous speeds can't be deleted for one person, because nothing in them says whose they are.</li>
+</ul>
+
+<h2>Children</h2>
+<p>Pathz is for drivers and is not meant for children under 13.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be posted here with a new date, and testers will be told in the app or by message.</p>
+
+<h2>Contact</h2>
+<p>Jaafar Mohammad, <a href="mailto:jaafarmohammad002@gmail.com">jaafarmohammad002@gmail.com</a></p>
+</main>
+</body>
+</html>
